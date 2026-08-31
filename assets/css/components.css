@@ -110,6 +110,8 @@
   position: relative;
 }
 .nav-link:hover { color: var(--color-gold); }
+.nav-link.active { color: var(--color-gold); }
+.nav-link.active::after { width: 100%; }
 .nav-link::after {
   content: '';
   position: absolute;

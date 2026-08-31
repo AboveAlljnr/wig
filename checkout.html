@@ -14,46 +14,8 @@
 </head>
 <body>
 
-  <!-- Announcement Bar -->
-  <div class="announcement-bar">Complimentary Shipping on Orders Over <span>$350</span> &mdash; Handcrafted with Intention</div>
-
-  <!-- Navigation -->
-  <header class="site-header" id="site-header">
-    <nav class="nav-container">
-      <a href="index.html" class="nav-logo">SISSY'S <span>LUXURY</span></a>
-      <ul class="nav-links">
-        <li><a href="collection.html" class="nav-link">Collections</a></li>
-        <li><a href="collection.html?cat=tops" class="nav-link">Tops</a></li>
-        <li><a href="collection.html?cat=dresses" class="nav-link">Dresses</a></li>
-        <li><a href="about.html" class="nav-link">Our Process</a></li>
-        <li><a href="ai-stylist-app/index.html" class="nav-link">AI Stylist</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="nav-action-btn" aria-label="Search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        </button>
-        <a href="account.html" class="nav-action-btn" aria-label="Account" id="account-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </a>
-        <button class="nav-action-btn" id="cart-btn" aria-label="Shopping bag">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="cart-count" id="cart-count" style="display:none;">0</span>
-        </button>
-        <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      </div>
-    </nav>
-  </header>
-
-  <div class="mobile-menu" id="mobile-menu">
-    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
-    <a href="index.html">Home</a>
-    <a href="collection.html">Collections</a>
-    <a href="collection.html?cat=tops">Tops</a>
-    <a href="collection.html?cat=dresses">Dresses</a>
-    <a href="about.html">Our Process</a>
-    <a href="ai-stylist-app/index.html">AI Stylist</a>
-    <a href="account.html">Account</a>
-  </div>
+  <!-- Shared layout: announcement bar, navigation, mobile menu -->
+  <div data-site-layout="top"></div>
 
   <main class="main-content-with-bar">
     <div class="container">
@@ -176,25 +138,13 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-bottom" style="border: none; padding: var(--space-md) 0;">
-        <span class="footer-copyright">&copy; 2026 SISSY'S LUXURY. All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
+  <!-- Shared layout: minimal footer -->
+  <div data-site-layout="footer-minimal"></div>
 
-  <div class="cart-overlay" id="cart-overlay"></div>
-  <div class="cart-drawer" id="cart-drawer">
-    <div class="cart-drawer-header"><span class="cart-drawer-title">Shopping Bag</span><button id="cart-close" aria-label="Close cart">&times;</button></div>
-    <div class="cart-drawer-body" id="cart-drawer-body"><div class="cart-empty"><p class="headline-sm">Your bag is empty</p></div></div>
-    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
-      <div class="cart-subtotal"><span class="label-caps">Subtotal</span><span id="cart-subtotal-amount">$0.00</span></div>
-      <a href="checkout.html" class="btn btn-primary" style="width:100%;">Proceed to Checkout</a>
-    </div>
-  </div>
+  <!-- Shared layout: cart drawer -->
+  <div data-site-layout="cart"></div>
 
+  <script src="assets/js/site.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/checkout.js"></script>
 </body>
