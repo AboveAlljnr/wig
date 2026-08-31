@@ -3,7 +3,7 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const orderData = sessionStorage.getItem('maison_creme_order');
+  const orderData = sessionStorage.getItem('sissys_luxury_order');
 
   if (!orderData) {
     document.querySelector('.confirm-page').innerHTML = `
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailRow = document.getElementById('confirm-email-row');
     const emailEl = document.getElementById('confirm-email');
 
-    if (orderNumEl) orderNumEl.textContent = order.orderNumber || 'MC-2026-00000';
+    if (orderNumEl) orderNumEl.textContent = order.orderNumber || 'SL-2026-00000';
     if (dateEl) dateEl.textContent = order.date || new Date().toLocaleDateString();
     if (emailEl && order.email) { emailEl.textContent = order.email; if (emailRow) emailRow.style.display = 'flex'; }
 
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Clear cart + session data only when leaving the page
     const clearStorage = () => {
-      sessionStorage.removeItem('maison_creme_order');
-      localStorage.removeItem('maison_creme_cart');
+      sessionStorage.removeItem('sissys_luxury_order');
+      localStorage.removeItem('sissys_luxury_cart');
     };
     window.addEventListener('beforeunload', clearStorage);
     // Also clear on navigating away via link click

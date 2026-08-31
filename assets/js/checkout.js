@@ -3,7 +3,7 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const CART_KEY = 'maison_creme_cart';
+  const CART_KEY = 'sissys_luxury_cart';
 
   // ── Populate order summary from cart ───────────────────────
   function renderOrderSummary() {
@@ -219,12 +219,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Store order data for confirmation page
       const orderData = {
-        orderNumber: 'MC-' + new Date().getFullYear() + '-' + String(Math.floor(Math.random() * 90000) + 10000),
+        orderNumber: 'SL-' + new Date().getFullYear() + '-' + String(Math.floor(Math.random() * 90000) + 10000),
         date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
         email: fields.email.el.value.trim(),
         cart: JSON.parse(localStorage.getItem(CART_KEY)) || [],
       };
-      sessionStorage.setItem('maison_creme_order', JSON.stringify(orderData));
+      sessionStorage.setItem('sissys_luxury_order', JSON.stringify(orderData));
 
       // Navigate
       window.location.href = 'confirmation.html';

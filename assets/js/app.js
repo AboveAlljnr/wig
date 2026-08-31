@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Cart State (localStorage) ─────────────────────────────
-  const CART_KEY = 'maison_creme_cart';
+  const CART_KEY = 'sissys_luxury_cart';
 
   function getCart() {
     try {
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Expose cart functions globally
-  window.MaisonCart = {
+  window.SissysCart = {
     add: addToCart,
     remove: (id, variant) => { removeFromCart(id, variant); updateCartUI(); },
     get: getCart,
@@ -348,5 +348,26 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // ── Newsletter subscription ──────────────────────────────
+  const newsletterForm = document.querySelector('.newsletter-input-group');
+  if (newsletterForm) {
+    const input = newsletterForm.querySelector('input[type="email"]');
+    const btn = newsletterForm.querySelector('button');
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = (input && input.value || '').trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        input.style.borderBottomColor = 'var(--color-error)';
+        return;
+      }
+      input.style.borderBottomColor = '';
+      const msg = document.createElement('div');
+      msg.textContent = 'Thank you for subscribing!';
+      msg.style.cssText = 'font-size:12px;color:var(--color-gold);margin-top:var(--space-sm);text-align:center;';
+      newsletterForm.parentElement.appendChild(msg);
+      btn.disabled = true;
+    });
+  }
 
 });
