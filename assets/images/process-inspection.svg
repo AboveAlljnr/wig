@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F5F5F2"/>
+  <circle cx="400" cy="250" r="80" stroke="#1A1A1A" stroke-width="1.5" opacity="0.12"/>
+  <circle cx="400" cy="250" r="50" stroke="#1A1A1A" stroke-width="1" opacity="0.08"/>
+  <circle cx="400" cy="250" r="25" stroke="#D4AF37" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="400" cy="250" r="3" fill="#D4AF37" opacity="0.5"/>
+  <line x1="400" y1="170" x2="400" y2="330" stroke="#D4AF37" stroke-width="0.8" opacity="0.25"/>
+  <line x1="320" y1="250" x2="480" y2="250" stroke="#D4AF37" stroke-width="0.8" opacity="0.25"/>
+  <path d="M320 200c25-20 50-30 80-30" stroke="#1A1A1A" stroke-width="1" opacity="0.1"/>
+  <path d="M480 300c-25 20-50 30-80 30" stroke="#1A1A1A" stroke-width="1" opacity="0.1"/>
+  <text x="400" y="440" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#1A1A1A" opacity="0.8">Quality Control</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#747878">20-point garment inspection</text>
+</svg>

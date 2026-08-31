@@ -1,0 +1,166 @@
+/* ============================================================
+   SISSY'S LUXURY — Account Page Styles
+   ============================================================ */
+.account-layout {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-2xl);
+}
+.account-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+.account-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: var(--space-sm);
+}
+.account-subtitle {
+  font-size: 14px;
+  color: var(--color-grey-dark);
+}
+.account-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-grey-subtle);
+}
+.account-tab {
+  flex: 1;
+  padding: 12px 0;
+  text-align: center;
+  font-size: var(--label-caps-size);
+  font-weight: var(--label-caps-weight);
+  letter-spacing: var(--label-caps-spacing);
+  text-transform: uppercase;
+  color: var(--color-grey-mid);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+.account-tab:hover { color: var(--color-charcoal); }
+.account-tab.active {
+  color: var(--color-charcoal);
+  border-bottom-color: var(--color-charcoal);
+}
+.account-form { display: none; }
+.account-form.active { display: block; }
+.account-form .form-group { margin-bottom: var(--space-md); }
+.account-form .form-label {
+  font-size: var(--label-caps-size);
+  font-weight: var(--label-caps-weight);
+  letter-spacing: var(--label-caps-spacing);
+  text-transform: uppercase;
+  color: var(--color-grey-dark);
+  margin-bottom: 8px;
+}
+.account-form .form-input {
+  width: 100%;
+  padding: 14px 0;
+  font-size: var(--body-md-size);
+  color: var(--color-charcoal);
+  border: none;
+  border-bottom: 1px solid var(--color-grey-subtle);
+  background: transparent;
+  transition: border-color var(--duration-normal) var(--ease-smooth);
+}
+.account-form .form-input:focus { border-bottom-color: var(--color-charcoal); }
+.account-form .form-input::placeholder { color: var(--color-grey-mid); }
+.account-submit {
+  width: 100%;
+  margin-top: var(--space-md);
+}
+.account-forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: var(--color-grey-mid);
+  margin-top: 6px;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+.account-forgot:hover { color: var(--color-gold); }
+.account-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+  color: var(--color-grey-mid);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.account-divider::before,
+.account-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-grey-subtle);
+}
+.account-guest {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-grey-mid);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+.account-guest:hover { color: var(--color-charcoal); }
+.account-error {
+  font-size: 12px;
+  color: #c0392b;
+  margin-top: 4px;
+  display: none;
+}
+.account-success {
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+.account-success-icon {
+  font-size: 48px;
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+}
+.account-success-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin-bottom: var(--space-sm);
+}
+.account-success-text {
+  font-size: 14px;
+  color: var(--color-grey-dark);
+  margin-bottom: var(--space-lg);
+}
+.account-logged-in {
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+.account-logged-in-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-charcoal);
+  color: var(--color-bone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 auto var(--space-md);
+}
+.account-logged-in-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.account-logged-in-email {
+  font-size: 14px;
+  color: var(--color-grey-dark);
+  margin-bottom: var(--space-lg);
+}
+@media (max-width: 480px) {
+  .account-title { font-size: 26px; }
+}

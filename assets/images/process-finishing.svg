@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F5F5F2"/>
+  <path d="M300 180c-30 20-50 50-50 90" stroke="#1A1A1A" stroke-width="1.5" opacity="0.12"/>
+  <path d="M500 180c30 20 50 50 50 90" stroke="#1A1A1A" stroke-width="1.5" opacity="0.12"/>
+  <path d="M280 280c-10 30 5 60 30 80" stroke="#1A1A1A" stroke-width="1" opacity="0.1"/>
+  <path d="M520 280c10 30-5 60-30 80" stroke="#1A1A1A" stroke-width="1" opacity="0.1"/>
+  <path d="M340 170c30-8 60-8 90 0" stroke="#D4AF37" stroke-width="1.5" opacity="0.4"/>
+  <path d="M330 200c40-12 80-12 120 0" stroke="#D4AF37" stroke-width="1.5" opacity="0.3"/>
+  <path d="M320 240c50-15 110-15 160 0" stroke="#D4AF37" stroke-width="1" opacity="0.2"/>
+  <path d="M370 360c10 15 30 15 40 0" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <path d="M350 340c15 20 50 20 65 0" stroke="#D4AF37" stroke-width="1" opacity="0.15"/>
+  <circle cx="400" cy="290" r="4" fill="#D4AF37" opacity="0.2"/>
+  <text x="400" y="440" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#1A1A1A" opacity="0.8">Finishing &amp; Detailing</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#747878">Hand-finishing &amp; final pressing</text>
+</svg>

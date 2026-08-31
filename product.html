@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Silk Blouse | SISSY'S LUXURY</title>
+  <meta name="description" content="The Silk Blouse — a masterpiece of Italian craftsmanship. 100% silk charmeuse, hand-finished seams, mother-of-pearl buttons. Available in multiple sizes and colors.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages/product.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">Complimentary Shipping on Orders Over <span>$350</span> &mdash; Handcrafted with Intention</div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">SISSY'S <span>LUXURY</span></a>
+      <ul class="nav-links">
+        <li><a href="collection.html" class="nav-link">Collections</a></li>
+        <li><a href="collection.html?cat=tops" class="nav-link">Tops</a></li>
+        <li><a href="collection.html?cat=dresses" class="nav-link">Dresses</a></li>
+        <li><a href="about.html" class="nav-link">Our Process</a></li>
+        <li><a href="ai-stylist-app/index.html" class="nav-link">AI Stylist</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <a href="account.html" class="nav-action-btn" aria-label="Account" id="account-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="nav-action-btn" id="cart-btn" aria-label="Shopping bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count" style="display:none;">0</span>
+        </button>
+        <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="collection.html">Collections</a>
+    <a href="collection.html?cat=tops">Tops</a>
+    <a href="collection.html?cat=dresses">Dresses</a>
+    <a href="about.html">Our Process</a>
+    <a href="ai-stylist-app/index.html">AI Stylist</a>
+    <a href="account.html">Account</a>
+  </div>
+
+  <main class="main-content-with-bar">
+    <div class="container">
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs pdp-breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">›</span>
+        <a href="collection.html">Collections</a>
+        <span class="separator">›</span>
+        <span>The Silk Blouse</span>
+      </div>
+
+      <!-- PDP Layout -->
+      <div class="pdp-layout">
+        <!-- Gallery -->
+        <div class="pdp-gallery reveal-left">
+          <div class="pdp-main-image" id="pdp-main-image">
+            <img loading="eager" src="assets/images/product-blouse.jpg" alt="The Silk Blouse" id="pdp-main-img">
+          </div>
+          <div class="pdp-thumbnails">
+            <button class="pdp-thumb active" data-img="assets/images/product-blouse.jpg">
+              <img loading="lazy" src="assets/images/product-blouse.jpg" alt="Front View">
+            </button>
+            <button class="pdp-thumb" data-img="assets/images/product-blouse.jpg">
+              <img loading="lazy" src="assets/images/product-blouse.jpg" alt="Detail View">
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="pdp-info reveal-right">
+          <div style="display:flex;gap:8px;margin-bottom:var(--space-sm);">
+            <span class="chip chip-new" id="pdp-info-chip">New Arrival</span>
+            <span class="chip">In Stock</span>
+          </div>
+
+          <h1 class="pdp-title">The Silk Blouse</h1>
+          <div class="pdp-price">$325.00</div>
+          <p class="pdp-description">
+            A masterpiece of Italian craftsmanship. This silk charmeuse blouse features hand-finished seams,
+            mother-of-pearl buttons, and a relaxed silhouette that drapes effortlessly. Each piece is cut
+            and sewn by master artisans in our Milan atelier.
+          </p>
+
+          <!-- Size Variant -->
+          <div class="pdp-variant-group">
+            <span class="pdp-variant-label">Size</span>
+            <div class="pdp-variant-options" id="size-options">
+              <button class="pdp-variant-btn" data-value="xs">XS</button>
+              <button class="pdp-variant-btn active" data-value="s">S</button>
+              <button class="pdp-variant-btn" data-value="m">M</button>
+              <button class="pdp-variant-btn" data-value="l">L</button>
+              <button class="pdp-variant-btn" data-value="xl">XL</button>
+            </div>
+          </div>
+
+          <!-- Color Variant -->
+          <div class="pdp-variant-group">
+            <span class="pdp-variant-label">Color</span>
+            <div class="pdp-variant-options" id="color-options">
+              <button class="pdp-variant-btn active" data-value="ivory">Ivory</button>
+              <button class="pdp-variant-btn" data-value="black">Black</button>
+              <button class="pdp-variant-btn" data-value="blush">Blush</button>
+              <button class="pdp-variant-btn" data-value="navy">Navy</button>
+            </div>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="pdp-add-to-cart">
+            <div class="qty-selector">
+              <button class="qty-btn" id="qty-minus">−</button>
+              <div class="qty-value" id="qty-value">1</div>
+              <button class="qty-btn" id="qty-plus">+</button>
+            </div>
+            <button class="btn btn-primary pdp-add-btn"
+                    id="add-to-cart-btn"
+                    data-add-to-cart
+                    data-product-id="silk-blouse-001"
+                    data-product-name="The Silk Blouse"
+                    data-product-price="325"
+                    data-product-image="assets/images/product-blouse.jpg"
+                    data-product-variant="S / Ivory">
+              Add to Bag — $325.00
+            </button>
+          </div>
+
+          <!-- Accordion -->
+          <div class="pdp-accordion">
+            <div class="pdp-accordion-item open">
+              <button class="pdp-accordion-header">
+                Product Details
+                <span class="pdp-accordion-icon">+</span>
+              </button>
+              <div class="pdp-accordion-body">
+                <div class="pdp-accordion-content">
+                  <p><strong>Fabric:</strong> 100% Silk Charmeuse</p>
+                  <p><strong>Weight:</strong> 19 Momme (Medium Weight)</p>
+                  <p><strong>Finish:</strong> Hand-finished seams &amp; French seams</p>
+                  <p><strong>Closure:</strong> Mother-of-pearl buttons, covered placket</p>
+                  <p><strong>Fit:</strong> Relaxed silhouette, true to size</p>
+                  <p><strong>Care:</strong> Dry clean only</p>
+                </div>
+              </div>
+            </div>
+            <div class="pdp-accordion-item">
+              <button class="pdp-accordion-header">
+                Shipping & Returns
+                <span class="pdp-accordion-icon">+</span>
+              </button>
+              <div class="pdp-accordion-body">
+                <div class="pdp-accordion-content">
+                  <p>Complimentary shipping on orders over $350. Standard shipping (5-7 business days) is $15. Express shipping (2-3 business days) is $25.</p>
+                  <p>We accept returns within 14 days of delivery for unworn, unaltered units in original packaging. Custom orders are final sale.</p>
+                </div>
+              </div>
+            </div>
+            <div class="pdp-accordion-item">
+              <button class="pdp-accordion-header">
+                Care Instructions
+                <span class="pdp-accordion-icon">+</span>
+              </button>
+              <div class="pdp-accordion-body">
+                <div class="pdp-accordion-content">
+                  <p>Dry clean only. Store on a padded hanger in a breathable garment bag. Avoid exposure to direct sunlight for extended periods. Iron on low heat if needed.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendations -->
+      <section class="pdp-recommendations">
+        <div class="section-header reveal">
+          <span class="label-caps" style="color: var(--color-gold);">You May Also Like</span>
+          <h2 class="section-title">Complete Your Collection</h2>
+        </div>
+        <div class="grid grid-4">
+          <a href="product.html?id=gown" class="product-card reveal reveal-delay-1">
+            <div class="product-card-image img-zoom">
+              <img loading="lazy" src="assets/images/product-dress.jpg" alt="The Riviera Gown">
+            </div>
+            <div class="product-card-category">Gown</div>
+            <div class="product-card-name">The Riviera Gown</div>
+            <div class="product-card-price">$520.00</div>
+          </a>
+          <a href="product.html?id=skirt" class="product-card reveal reveal-delay-2">
+            <div class="product-card-image img-zoom">
+              <img loading="lazy" src="assets/images/product-skirt.jpg" alt="The Parisian Skirt">
+            </div>
+            <div class="product-card-category">Skirt</div>
+            <div class="product-card-name">The Parisian Skirt</div>
+            <div class="product-card-price">$395.00</div>
+          </a>
+          <a href="product.html?id=blazer" class="product-card reveal reveal-delay-3">
+            <div class="product-card-image img-zoom">
+              <img loading="lazy" src="assets/images/product-blazer.jpg" alt="The Monaco Blazer">
+            </div>
+            <div class="product-card-category">Blazer</div>
+            <div class="product-card-name">The Monaco Blazer</div>
+            <div class="product-card-price">$450.00</div>
+          </a>
+          <a href="product.html?id=dashiki" class="product-card reveal reveal-delay-4">
+            <div class="product-card-image img-zoom">
+              <img loading="lazy" src="assets/images/product-dashiki.jpg" alt="The Dashiki Dress">
+            </div>
+            <div class="product-card-category">Dress</div>
+            <div class="product-card-name">The Dashiki Dress</div>
+            <div class="product-card-price">$545.00</div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">SISSY'S LUXURY</div>
+          <p class="footer-brand-text">Luxury ready-to-wear fashion, handcrafted with intention.</p>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Shop</div>
+          <a href="collection.html">All Collections</a>
+          <a href="collection.html?cat=tops">Tops &amp; Blouses</a>
+          <a href="collection.html?cat=dresses">Dresses &amp; Gowns</a>
+          <a href="collection.html?cat=bottoms">Skirts &amp; Trousers</a>
+          <a href="collection.html?cat=outerwear">Outerwear</a>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Sissy's</div>
+          <a href="about.html">Our Process</a>
+          <a href="#">Style Guide</a>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Support</div>
+          <a href="#">Contact Us</a>
+          <a href="#">Shipping & Returns</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright">&copy; 2026 SISSY'S LUXURY. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <span class="cart-drawer-title">Shopping Bag</span>
+      <button id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body">
+      <div class="cart-empty"><p class="headline-sm">Your bag is empty</p></div>
+    </div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+      <div class="cart-subtotal">
+        <span class="label-caps">Subtotal</span>
+        <span id="cart-subtotal-amount">$0.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary" style="width:100%;">Proceed to Checkout</a>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // ── Product Database ──────────────────────────
+    const products = {
+      blouse: {
+        name: 'The Silk Blouse', id: 'silk-blouse-001',
+        price: 325, img: 'product-blouse.jpg', category: 'Blouse',
+        desc: 'A masterpiece of Italian craftsmanship. This silk charmeuse blouse features hand-finished seams, mother-of-pearl buttons, and a relaxed silhouette that drapes effortlessly. Each piece is cut and sewn by master artisans in our Milan atelier.',
+        details: [['Fabric','100% Silk Charmeuse'],['Weight','19 Momme (Medium Weight)'],['Finish','Hand-finished seams & French seams'],['Closure','Mother-of-pearl buttons, covered placket'],['Fit','Relaxed silhouette, true to size'],['Care','Dry clean only']],
+        sizes: ['XS','S','M','L','XL'], colors: ['Ivory','Black','Blush','Navy'], chip:'New Arrival'
+      },
+      gown: {
+        name: 'The Riviera Gown', id: 'riviera-gown-002',
+        price: 520, img: 'product-dress.jpg', category: 'Gown',
+        desc: 'An exquisite floor-length gown cut from premium Italian crepe. Features an architectural draped bodice, concealed side zip, and a softly flared skirt. Hand-beaded detailing at the waist adds a subtle touch of opulence.',
+        details: [['Fabric','Italian Crepe with beaded accents'],['Weight','Mid-weight (280 gsm)'],['Finish','Hand-finished seams, concealed zip'],['Fit','Fits true to size, fitted bodice'],['Care','Dry clean only']],
+        sizes: ['XS','S','M','L','XL'], colors: ['Ivory','Black','Navy','Burgundy'], chip:'New Arrival'
+      },
+      skirt: {
+        name: 'The Parisian Skirt', id: 'parisian-skirt-003',
+        price: 395, img: 'product-skirt.jpg', category: 'Skirt',
+        desc: 'A timeless A-line skirt crafted from heavyweight Italian wool. Precision-cut with clean seams and a concealed back zip. The mid-rise waist and below-knee length create an elegant, flattering silhouette for any occasion.',
+        details: [['Fabric','Italian Wool Blend'],['Weight','Mid-weight (320 gsm)'],['Finish','Precision-cut seams, concealed back zip'],['Fit','Mid-rise, true to size'],['Care','Dry clean only']],
+        sizes: ['XS','S','M','L','XL'], colors: ['Black','Charcoal','Navy','Camel'], chip:''
+      },
+      blazer: {
+        name: 'The Monaco Blazer', id: 'monaco-blazer-004',
+        price: 450, img: 'product-blazer.jpg', category: 'Blazer',
+        desc: 'A sharply tailored single-breasted blazer in virgin wool. Features notch lapels, a canvas chest piece, and working button cuffs. Fully lined in cupro for a smooth drape and effortless layering.',
+        details: [['Fabric','Virgin Wool, Cupro lining'],['Weight','Mid-weight (260 gsm)'],['Finish','Canvas chest piece, horn buttons'],['Fit','Tailored fit, true to size'],['Care','Dry clean only']],
+        sizes: ['XS','S','M','L','XL'], colors: ['Black','Charcoal','Navy'], chip:''
+      },
+      dashiki: {
+        name: 'The Dashiki Dress', id: 'dashiki-dress-005',
+        price: 545, img: 'product-dashiki.jpg', category: 'Dress',
+        desc: 'A contemporary take on the classic dashiki silhouette. Cut from hand-dyed Ankara cotton, this midi dress features an embroidered V-neckline, side slits, and a versatile fit-and-flare shape. Each piece has a unique print placement.',
+        details: [['Fabric','Hand-dyed Ankara Cotton'],['Weight','Medium weight'],['Finish','Embroidered neckline, side slits'],['Fit','Fit-and-flare, true to size'],['Care','Hand wash cold, hang dry']],
+        sizes: ['XS','S','M','L','XL'], colors: ['Indigo Print','Saffron Print','Emerald Print'], chip:''
+      },
+      ankara: {
+        name: 'The Ankara Top', id: 'ankara-top-006',
+        price: 350, img: 'product-ankara.jpg', category: 'Top',
+        desc: 'A vibrant Ankara print top with a relaxed, boxy cut. Features a modest boat neckline, rolled-hem sleeves, and an easy pullover silhouette. Pair effortlessly with tailored trousers or denim.',
+        details: [['Fabric','100% Cotton Ankara Print'],['Weight','Lightweight'],['Finish','Rolled-hem sleeves, boat neckline'],['Fit','Relaxed, boxy cut'],['Care','Hand wash cold, hang dry']],
+        sizes: ['XS','S','M','L','XL'], colors: ['Blue Print','Red Print','Green Print'], chip:''
+      },
+      coat: {
+        name: 'The Vienna Coat', id: 'vienna-coat-007',
+        price: 420, img: 'product-blazer.jpg', category: 'Coat',
+        desc: 'An elegant longline coat in a luxurious wool-cashmere blend. Features a notched lapel, double-breasted front, and flared silhouette with a back vent. The perfect transitional layer for cooler months.',
+        details: [['Fabric','Wool-Cashmere Blend (70/30)'],['Weight','Heavyweight (420 gsm)'],['Finish','Double-breasted, horn buttons'],['Fit','Relaxed fit, true to size'],['Care','Dry clean only']],
+        sizes: ['XS','S','M','L','XL'], colors: ['Camel','Black','Charcoal'], chip:''
+      },
+      trousers: {
+        name: 'The Milano Trousers', id: 'milano-trousers-008',
+        price: 280, img: 'product-skirt.jpg', category: 'Trousers',
+        desc: 'Crisp, wide-leg trousers cut from a premium cotton-linen blend. Features a flat front, side pockets, and a tailored waistband with belt loops. The relaxed leg creates an effortlessly polished look.',
+        details: [['Fabric','Cotton-Linen Blend'],['Weight','Mid-weight'],['Finish','Flat front, side pockets, belt loops'],['Fit','Wide-leg, true to size'],['Care','Dry clean or hand wash']],
+        sizes: ['XS','S','M','L','XL'], colors: ['Black','Navy','Beige','Olive'], chip:''
+      }
+    };
+
+    // ── Render Product from URL ───────────────────
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id') || 'blouse';
+    const p = products[id] || products.blouse;
+
+    // Meta
+    document.title = p.name + ' | SISSY'S LUXURY';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.content = p.name + ' — ' + p.desc;
+
+    // Breadcrumb
+    const breadcrumbLast = document.querySelector('.breadcrumbs span:last-child');
+    if (breadcrumbLast) breadcrumbLast.textContent = p.name;
+
+    // Gallery
+    const mainImg = document.getElementById('pdp-main-img');
+    if (mainImg) { mainImg.src = 'assets/images/' + p.img; mainImg.alt = p.name; }
+    document.querySelectorAll('.pdp-thumb').forEach(t => {
+      t.dataset.img = 'assets/images/' + p.img;
+      t.querySelector('img').src = 'assets/images/' + p.img;
+      t.querySelector('img').alt = p.name;
+    });
+
+    // Info
+    const titleEl = document.querySelector('.pdp-title');
+    if (titleEl) titleEl.textContent = p.name;
+    const priceEl = document.querySelector('.pdp-price');
+    if (priceEl) priceEl.textContent = '$' + p.price.toFixed(2);
+    const descEl = document.querySelector('.pdp-description');
+    if (descEl) descEl.textContent = p.desc;
+
+    // Chip
+    const chipEl = document.querySelector('#pdp-info-chip');
+    if (chipEl) chipEl.textContent = p.chip || 'In Stock';
+
+    // Details accordion
+    const detailsBody = document.querySelector('.pdp-accordion-item:first-child .pdp-accordion-content');
+    if (detailsBody && p.details) {
+      detailsBody.innerHTML = p.details.map(d => '<p><strong>' + d[0] + ':</strong> ' + d[1] + '</p>').join('');
+    }
+
+    // Add-to-cart button
+    const atcBtn = document.getElementById('add-to-cart-btn');
+    if (atcBtn) {
+      atcBtn.dataset.productId = p.id;
+      atcBtn.dataset.productName = p.name;
+      atcBtn.dataset.productPrice = p.price;
+      atcBtn.dataset.productImage = 'assets/images/' + p.img;
+      const sizeActive = document.querySelector('#size-options .pdp-variant-btn.active');
+      const colorActive = document.querySelector('#color-options .pdp-variant-btn.active');
+      const size = sizeActive ? sizeActive.textContent : 'S';
+      const color = colorActive ? colorActive.textContent : 'Ivory';
+      atcBtn.dataset.productVariant = size + ' / ' + color;
+      atcBtn.innerHTML = 'Add to Bag &mdash; $' + p.price.toFixed(2);
+    }
+
+    // Thumbnail Gallery
+    document.querySelectorAll('.pdp-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        document.querySelectorAll('.pdp-thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        document.getElementById('pdp-main-img').src = thumb.dataset.img;
+      });
+    });
+
+    // Variant Selectors
+    document.querySelectorAll('.pdp-variant-options').forEach(group => {
+      group.addEventListener('click', (e) => {
+        const btn = e.target.closest('.pdp-variant-btn');
+        if (!btn) return;
+        group.querySelectorAll('.pdp-variant-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        // Update add-to-cart variant text
+        const size = document.querySelector('#size-options .pdp-variant-btn.active');
+        const color = document.querySelector('#color-options .pdp-variant-btn.active');
+        if (atcBtn && size && color) {
+          atcBtn.dataset.productVariant = size.textContent + ' / ' + color.textContent;
+        }
+      });
+    });
+
+    // Quantity
+    let qty = 1;
+    const qtyVal = document.getElementById('qty-value');
+    function syncQty() { if (atcBtn) atcBtn.dataset.productQty = qty; }
+    syncQty();
+    document.getElementById('qty-minus').addEventListener('click', () => {
+      if (qty > 1) { qty--; qtyVal.textContent = qty; syncQty(); }
+    });
+    document.getElementById('qty-plus').addEventListener('click', () => {
+      if (qty < 10) { qty++; qtyVal.textContent = qty; syncQty(); }
+    });
+
+    // Accordion
+    document.querySelectorAll('.pdp-accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        header.closest('.pdp-accordion-item').classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

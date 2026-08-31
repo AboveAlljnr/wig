@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F5F5F2"/>
+  <rect x="260" y="170" width="280" height="200" rx="2" stroke="#1A1A1A" stroke-width="1.5" opacity="0.12"/>
+  <line x1="260" y1="230" x2="540" y2="230" stroke="#1A1A1A" stroke-width="1" opacity="0.08"/>
+  <line x1="260" y1="290" x2="540" y2="290" stroke="#1A1A1A" stroke-width="1" opacity="0.08"/>
+  <path d="M300 210c0 30-20 50-20 80" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <path d="M360 210c0 30-20 50-20 80" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <path d="M440 210c0 30 20 50 20 80" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <path d="M500 210c0 30 20 50 20 80" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <path d="M340 340c20-10 60-10 80 0" stroke="#D4AF37" stroke-width="1" opacity="0.2"/>
+  <circle cx="400" cy="250" r="3" fill="#D4AF37" opacity="0.4"/>
+  <circle cx="380" cy="270" r="2" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="420" cy="260" r="2" fill="#D4AF37" opacity="0.3"/>
+  <text x="400" y="440" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#1A1A1A" opacity="0.8">Pattern Cutting &amp; Tailoring</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#747878">Precision cutting by master tailors</text>
+</svg>

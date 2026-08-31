@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F5F5F2"/>
+  <path d="M400 160c-60 0-108 40-108 90 0 40 30 70 60 90v60c0 20 20 30 48 30s48-10 48-30v-60c30-20 60-50 60-90 0-50-48-90-108-90Z" stroke="#1A1A1A" stroke-width="1.5" opacity="0.12"/>
+  <path d="M340 200c-20 15-35 35-40 55" stroke="#D4AF37" stroke-width="1.5" opacity="0.5"/>
+  <path d="M460 200c20 15 35 35 40 55" stroke="#D4AF37" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="350" cy="240" r="3" fill="#D4AF37" opacity="0.4"/>
+  <circle cx="450" cy="240" r="3" fill="#D4AF37" opacity="0.4"/>
+  <circle cx="400" cy="220" r="4" fill="#D4AF37" opacity="0.6"/>
+  <text x="400" y="440" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#1A1A1A" opacity="0.8">Premium Fabric Sourcing</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#747878">Italian mills &amp; African textile cooperatives</text>
+</svg>

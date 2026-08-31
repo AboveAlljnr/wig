@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ready-to-Wear | SISSY'S LUXURY</title>
+  <meta name="description" content="Explore our curated collection of luxury ready-to-wear fashion. Hand-finished Italian fabrics in a variety of silhouettes, colors, and sizes.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages/collection.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">Complimentary Shipping on Orders Over <span>$350</span> &mdash; Handcrafted with Intention</div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">SISSY'S <span>LUXURY</span></a>
+      <ul class="nav-links">
+        <li><a href="collection.html" class="nav-link">Collections</a></li>
+        <li><a href="collection.html?cat=tops" class="nav-link">Tops</a></li>
+        <li><a href="collection.html?cat=dresses" class="nav-link">Dresses</a></li>
+        <li><a href="about.html" class="nav-link">Our Process</a></li>
+        <li><a href="ai-stylist-app/index.html" class="nav-link">AI Stylist</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <a href="account.html" class="nav-action-btn" aria-label="Account" id="account-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="nav-action-btn" id="cart-btn" aria-label="Shopping bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count" style="display:none;">0</span>
+        </button>
+        <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="collection.html">Collections</a>
+    <a href="collection.html?cat=tops">Tops</a>
+    <a href="collection.html?cat=dresses">Dresses</a>
+    <a href="about.html">Our Process</a>
+    <a href="ai-stylist-app/index.html">AI Stylist</a>
+    <a href="account.html">Account</a>
+  </div>
+
+  <main class="main-content-with-bar">
+    <div class="container">
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">›</span>
+        <span>Collections</span>
+      </div>
+
+      <!-- Hero -->
+      <div class="collection-hero reveal">
+        <h1 class="collection-hero-title">The Collection</h1>
+        <p class="collection-hero-subtitle">Each piece is hand-finished by master artisans using premium Italian fabrics. Browse our full range of luxury ready-to-wear fashion.</p>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="collection-toolbar">
+        <div class="collection-filter-group">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="tops">Tops</button>
+          <button class="filter-btn" data-filter="dresses">Dresses</button>
+          <button class="filter-btn" data-filter="bottoms">Bottoms</button>
+          <button class="filter-btn" data-filter="outerwear">Outerwear</button>
+        </div>
+        <div class="collection-sort">
+          <span class="collection-count" id="product-count">8 Products</span>
+          <span>·</span>
+          <label for="sort-select">Sort by</label>
+          <select id="sort-select">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="collection-grid" id="product-grid">
+
+        <a href="product.html?id=blouse" class="product-card reveal" data-category="tops" data-price="325" data-date="2026-05">
+          <div class="product-card-image img-zoom">
+            <img loading="lazy" src="assets/images/product-blouse.jpg" alt="The Silk Blouse">
+            <div class="product-card-overlay"><span class="btn btn-primary btn-sm">Quick View</span></div>
+          </div>
+          <span class="chip chip-new" style="margin-bottom: 6px;">New</span>
+          <div class="product-card-category">Blouse</div>
+          <div class="product-card-name">The Silk Blouse</div>
+          <div class="product-card-price">$325.00</div>
+        </a>
+
+        <a href="product.html?id=gown" class="product-card reveal" data-category="dresses" data-price="520" data-date="2026-04">
+          <div class="product-card-image img-zoom">
+            <img loading="lazy" src="assets/images/product-dress.jpg" alt="The Riviera Gown">
+            <div class="product-card-overlay"><span class="btn btn-primary btn-sm">Quick View</span></div>
+          </div>
+          <div class="product-card-category">Gown</div>
+          <div class="product-card-name">The Riviera Gown</div>
+          <div class="product-card-price">$520.00</div>
+        </a>
+
+        <a href="product.html?id=skirt" class="product-card reveal" data-category="bottoms" data-price="395" data-date="2026-05">
+          <div class="product-card-image img-zoom">
+            <img loading="lazy" src="assets/images/product-skirt.jpg" alt="The Parisian Skirt">
+            <div class="product-card-overlay"><span class="btn btn-primary btn-sm">Quick View</span></div>
+          </div>
+          <span class="chip chip-new" style="margin-bottom: 6px;">New</span>
+          <div class="product-card-category">Skirt</div>
+          <div class="product-card-name">The Parisian Skirt</div>
+          <div class="product-card-price">$395.00</div>
+        </a>
+
+        <a href="product.html?id=blazer" class="product-card reveal" data-category="outerwear" data-price="450" data-date="2026-03">
+          <div class="product-card-image img-zoom">
+            <img loading="lazy" src="assets/images/product-blazer.jpg" alt="The Monaco Blazer">
+            <div class="product-card-overlay"><span class="btn btn-primary btn-sm">Quick View</span></div>
+          </div>
+          <div class="product-card-category">Blazer</div>
+          <div class="product-card-name">The Monaco Blazer</div>
+          <div class="product-card-price">$450.00</div>
+        </a>
+
+        <a href="product.html?id=dashiki" class="product-card reveal" data-category="dresses" data-price="545" data-date="2026-03">
+          <div class="product-card-image img-zoom">
+            <img loading="lazy" src="assets/images/product-dashiki.jpg" alt="The Dashiki Dress">
+            <div class="product-card-overlay"><span class="btn btn-primary btn-sm">Quick View</span></div>
+          </div>
+          <div class="product-card-category">Dress</div>
+          <div class="product-card-name">The Dashiki Dress</div>
+          <div class="product-card-price">$545.00</div>
+        </a>
+
+        <a href="product.html?id=ankara" class="product-card reveal" data-category="tops" data-price="350" data-date="2026-02">
+          <div class="product-card-image img-zoom">
+            <img loading="lazy" src="assets/images/product-ankara.jpg" alt="The Ankara Top">
+            <div class="product-card-overlay"><span class="btn btn-primary btn-sm">Quick View</span></div>
+          </div>
+          <div class="product-card-category">Top</div>
+          <div class="product-card-name">The Ankara Top</div>
+          <div class="product-card-price">$350.00</div>
+        </a>
+
+        <a href="product.html?id=coat" class="product-card reveal" data-category="outerwear" data-price="420" data-date="2026-04">
+          <div class="product-card-image img-zoom">
+            <img loading="lazy" src="assets/images/product-blazer.jpg" alt="The Vienna Coat">
+            <div class="product-card-overlay"><span class="btn btn-primary btn-sm">Quick View</span></div>
+          </div>
+          <div class="product-card-category">Coat</div>
+          <div class="product-card-name">The Vienna Coat</div>
+          <div class="product-card-price">$420.00</div>
+        </a>
+
+        <a href="product.html?id=trousers" class="product-card reveal" data-category="bottoms" data-price="280" data-date="2026-01">
+          <div class="product-card-image img-zoom">
+            <img loading="lazy" src="assets/images/product-skirt.jpg" alt="The Milano Trousers">
+            <div class="product-card-overlay"><span class="btn btn-primary btn-sm">Quick View</span></div>
+          </div>
+          <div class="product-card-category">Trousers</div>
+          <div class="product-card-name">The Milano Trousers</div>
+          <div class="product-card-price">$280.00</div>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">SISSY'S LUXURY</div>
+          <p class="footer-brand-text">Luxury ready-to-wear fashion, handcrafted with intention.</p>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Shop</div>
+          <a href="collection.html">All Collections</a>
+          <a href="collection.html?cat=tops">Tops &amp; Blouses</a>
+          <a href="collection.html?cat=dresses">Dresses &amp; Gowns</a>
+          <a href="collection.html?cat=bottoms">Skirts &amp; Trousers</a>
+          <a href="collection.html?cat=outerwear">Outerwear</a>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Sissy's</div>
+          <a href="about.html">Our Process</a>
+          <a href="#">Style Guide</a>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Support</div>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright">&copy; 2026 SISSY'S LUXURY. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header"><span class="cart-drawer-title">Shopping Bag</span><button id="cart-close" aria-label="Close cart">&times;</button></div>
+    <div class="cart-drawer-body" id="cart-drawer-body"><div class="cart-empty"><p class="headline-sm">Your bag is empty</p></div></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+      <div class="cart-subtotal"><span class="label-caps">Subtotal</span><span id="cart-subtotal-amount">$0.00</span></div>
+      <a href="checkout.html" class="btn btn-primary" style="width:100%;">Proceed to Checkout</a>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // ── Category Filtering ───────────────────────────
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const products = document.querySelectorAll('.product-card[data-category]');
+    const countEl = document.getElementById('product-count');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        let visible = 0;
+        products.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+            visible++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        if (countEl) countEl.textContent = `${visible} Product${visible !== 1 ? 's' : ''}`;
+      });
+    });
+
+    // ── Sorting ──────────────────────────────────────
+    const sortSelect = document.getElementById('sort-select');
+    const grid = document.getElementById('product-grid');
+    if (sortSelect && grid) {
+      sortSelect.addEventListener('change', () => {
+        const allCards = [...grid.querySelectorAll('.product-card[data-category]')];
+        const visibleCards = allCards.filter(c => c.style.display !== 'none');
+        visibleCards.sort((a, b) => {
+          switch (sortSelect.value) {
+            case 'price-asc': return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+            case 'price-desc': return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+            case 'newest': return b.dataset.date.localeCompare(a.dataset.date);
+            default: return 0;
+          }
+        });
+        visibleCards.forEach(card => grid.appendChild(card));
+      });
+    }
+
+    // ── URL-based search ────────────────────────────
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchTerm = urlParams.get('search');
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      let visible = 0;
+      products.forEach(card => {
+        const name = card.querySelector('.product-card-name');
+        const cat = card.querySelector('.product-card-category');
+        const match = (name && name.textContent.toLowerCase().includes(term)) ||
+                      (cat && cat.textContent.toLowerCase().includes(term));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      // No-results message
+      let noResults = document.getElementById('search-no-results');
+      if (visible === 0) {
+        if (!noResults) {
+          noResults = document.createElement('div');
+          noResults.id = 'search-no-results';
+          noResults.style.cssText = 'grid-column:1/-1;text-align:center;padding:60px 20px;';
+          noResults.innerHTML = '<p class="headline-sm" style="margin-bottom:8px;">No results found</p><p class="body-md text-grey">Try adjusting your search terms</p>';
+          grid.appendChild(noResults);
+        }
+        noResults.style.display = '';
+      } else if (noResults) {
+        noResults.style.display = 'none';
+      }
+      if (countEl) countEl.textContent = `${visible} Product${visible !== 1 ? 's' : ''}`;
+    }
+
+    // ── URL-based filter ─────────────────────────────
+    const cat = urlParams.get('cat');
+    if (cat) {
+      const targetBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+      if (targetBtn) targetBtn.click();
+    }
+  </script>
+</body>
+</html>

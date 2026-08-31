@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | SISSY'S LUXURY</title>
+  <meta name="description" content="Sign in or create an account at SISSY'S LUXURY.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages/account.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">Complimentary Shipping on Orders Over <span>$350</span> &mdash; Handcrafted with Intention</div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">SISSY'S <span>LUXURY</span></a>
+      <ul class="nav-links">
+        <li><a href="collection.html" class="nav-link">Collections</a></li>
+        <li><a href="collection.html?cat=tops" class="nav-link">Tops</a></li>
+        <li><a href="collection.html?cat=dresses" class="nav-link">Dresses</a></li>
+        <li><a href="about.html" class="nav-link">Our Process</a></li>
+        <li><a href="ai-stylist-app/index.html" class="nav-link">AI Stylist</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <a href="account.html" class="nav-action-btn" aria-label="Account" id="account-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="nav-action-btn" id="cart-btn" aria-label="Shopping bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count" style="display:none;">0</span>
+        </button>
+        <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="collection.html">Collections</a>
+    <a href="collection.html?cat=tops">Tops</a>
+    <a href="collection.html?cat=dresses">Dresses</a>
+    <a href="about.html">Our Process</a>
+    <a href="ai-stylist-app/index.html">AI Stylist</a>
+    <a href="account.html">Account</a>
+  </div>
+
+  <main class="main-content-with-bar">
+    <div class="container">
+      <div class="account-layout">
+
+        <!-- Header -->
+        <div class="account-header animate-fade-in-up">
+          <h1 class="account-title">My Account</h1>
+          <p class="account-subtitle">Sign in to your account or create one to manage orders and preferences.</p>
+        </div>
+
+        <!-- Logged-in View (hidden by default) -->
+        <div class="account-logged-in animate-fade-in-up" id="account-logged-in" style="display:none;">
+          <div class="account-logged-in-icon" id="account-initials">S</div>
+          <div class="account-logged-in-name" id="account-display-name"></div>
+          <div class="account-logged-in-email" id="account-display-email"></div>
+          <a href="collection.html" class="btn btn-primary" style="margin-bottom:var(--space-sm);">Continue Shopping</a>
+          <button class="btn-ghost" id="account-logout-btn" style="display:block;margin:var(--space-sm) auto 0;">Sign Out</button>
+        </div>
+
+        <!-- Login / Signup Forms -->
+        <div id="account-forms" class="animate-fade-in-up">
+
+          <!-- Tabs -->
+          <div class="account-tabs">
+            <button class="account-tab active" data-tab="login">Sign In</button>
+            <button class="account-tab" data-tab="signup">Create Account</button>
+          </div>
+
+          <!-- Login Form -->
+          <form class="account-form active" id="login-form" autocomplete="on">
+            <div class="form-group">
+              <label class="form-label" for="login-email">Email Address</label>
+              <input type="email" id="login-email" class="form-input" placeholder="your@email.com" autocomplete="email" required>
+              <div class="account-error" id="login-email-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="login-password">Password</label>
+              <input type="password" id="login-password" class="form-input" placeholder="Enter your password" autocomplete="current-password" required>
+              <div class="account-error" id="login-password-error"></div>
+            </div>
+            <a href="#" class="account-forgot">Forgot password?</a>
+            <div class="account-error" id="login-general-error" style="margin-top:var(--space-sm);"></div>
+            <button type="submit" class="btn btn-primary account-submit">Sign In</button>
+          </form>
+
+          <!-- Signup Form -->
+          <form class="account-form" id="signup-form" autocomplete="on">
+            <div class="form-group">
+              <label class="form-label" for="signup-name">Full Name</label>
+              <input type="text" id="signup-name" class="form-input" placeholder="Jane Doe" autocomplete="name" required>
+              <div class="account-error" id="signup-name-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signup-email">Email Address</label>
+              <input type="email" id="signup-email" class="form-input" placeholder="your@email.com" autocomplete="email" required>
+              <div class="account-error" id="signup-email-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signup-password">Password</label>
+              <input type="password" id="signup-password" class="form-input" placeholder="Create a password" autocomplete="new-password" required>
+              <div class="account-error" id="signup-password-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signup-confirm">Confirm Password</label>
+              <input type="password" id="signup-confirm" class="form-input" placeholder="Confirm your password" autocomplete="new-password" required>
+              <div class="account-error" id="signup-confirm-error"></div>
+            </div>
+            <div class="account-error" id="signup-general-error" style="margin-top:var(--space-sm);"></div>
+            <button type="submit" class="btn btn-primary account-submit">Create Account</button>
+          </form>
+
+          <!-- Divider -->
+          <div class="account-divider">or</div>
+          <a href="collection.html" class="account-guest">Continue as Guest</a>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">SISSY'S LUXURY</div>
+          <p class="footer-brand-text">Luxury ready-to-wear fashion, handcrafted with intention.</p>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Shop</div>
+          <a href="collection.html">All Collections</a>
+          <a href="collection.html?cat=tops">Tops &amp; Blouses</a>
+          <a href="collection.html?cat=dresses">Dresses &amp; Gowns</a>
+          <a href="collection.html?cat=bottoms">Skirts &amp; Trousers</a>
+          <a href="collection.html?cat=outerwear">Outerwear</a>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Sissy's</div>
+          <a href="about.html">Our Process</a>
+          <a href="account.html">My Account</a>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-title">Support</div>
+          <a href="#">Contact Us</a>
+          <a href="#">Shipping & Returns</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright">&copy; 2026 SISSY'S LUXURY. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <span class="cart-drawer-title">Shopping Bag</span>
+      <button id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body">
+      <div class="cart-empty"><p class="headline-sm">Your bag is empty</p></div>
+    </div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+      <div class="cart-subtotal">
+        <span class="label-caps">Subtotal</span>
+        <span id="cart-subtotal-amount">$0.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary" style="width:100%;">Proceed to Checkout</a>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // ── Tab Toggle ──────────────────────────────────────────
+    document.querySelectorAll('.account-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.account-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.account-form').forEach(f => f.classList.remove('active'));
+        document.getElementById(tab.dataset.tab + '-form').classList.add('active');
+        document.querySelectorAll('.account-error').forEach(e => e.style.display = 'none');
+      });
+    });
+
+    // ── Login Handler ──────────────────────────────────────
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.account-error').forEach(e => e.style.display = 'none');
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value;
+      if (!email) { showError('login-email-error', 'Email is required'); return; }
+      if (!password) { showError('login-password-error', 'Password is required'); return; }
+      const result = window.SissyAuth.login(email, password);
+      if (result.success) { window.location.href = 'collection.html'; }
+      else { showError('login-general-error', result.message); }
+    });
+
+    // ── Signup Handler ─────────────────────────────────────
+    document.getElementById('signup-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.account-error').forEach(e => e.style.display = 'none');
+      const name = document.getElementById('signup-name').value.trim();
+      const email = document.getElementById('signup-email').value.trim();
+      const password = document.getElementById('signup-password').value;
+      const confirm = document.getElementById('signup-confirm').value;
+      if (!name) { showError('signup-name-error', 'Full name is required'); return; }
+      if (!email) { showError('signup-email-error', 'Email is required'); return; }
+      if (!password) { showError('signup-password-error', 'Password is required'); return; }
+      if (password.length < 6) { showError('signup-password-error', 'Password must be at least 6 characters'); return; }
+      if (password !== confirm) { showError('signup-confirm-error', 'Passwords do not match'); return; }
+      const result = window.SissyAuth.register(name, email, password);
+      if (result.success) { window.location.href = 'collection.html'; }
+      else { showError('signup-general-error', result.message); }
+    });
+
+    // ── Logout Handler ─────────────────────────────────────
+    document.getElementById('account-logout-btn')?.addEventListener('click', () => {
+      window.SissyAuth.logout();
+      location.reload();
+    });
+
+    function showError(id, msg) {
+      const el = document.getElementById(id);
+      if (el) { el.textContent = msg; el.style.display = 'block'; }
+    }
+  </script>
+</body>
+</html>
