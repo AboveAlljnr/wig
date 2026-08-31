@@ -27,7 +27,7 @@
     return html;
   }
 
-  var announcement = '<div class="announcement-bar">Complimentary Shipping on Orders Over <span>$350</span> &mdash; Handcrafted with Intention</div>';
+  var announcement = '<div class="announcement-bar"><span class="announcement-full">Complimentary Shipping on Orders Over <span>$350</span> &mdash; Handcrafted with Intention</span><span class="announcement-short">Free Shipping Over $350</span></div>';
 
   var header = '' +
     '<header class="site-header" id="site-header">' +
